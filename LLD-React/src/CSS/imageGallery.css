@@ -1,0 +1,43 @@
+.image-gallery {
+  text-align: center;
+  padding: 20px;
+}
+
+.image-gallery h2 {
+  margin-bottom: 10px;
+}
+
+.image-gallery p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.image-gallery > div:first-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.image-gallery > div:first-of-type img {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.image-gallery > div:first-of-type img:hover {
+  transform: scale(1.05);
+}
+
+.SelectedImage {
+  margin-top: 30px;
+}
+
+.SelectedImage img {
+  width: 500px;
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
