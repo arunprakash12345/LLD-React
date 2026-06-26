@@ -1,7 +1,8 @@
 import "./App.css";
-import Counter from "./Counter";
-import CartItems from "./CartItems";
-import ImageGallery from "./ImageGallery";
+// import Counter from "./Counter";
+// import CartItems from "./CartItems";
+// import ImageGallery from "./ImageGallery";
+import TodoList from "./TodoList";
 
 function App() {
   const products = [
@@ -37,7 +38,8 @@ function App() {
     <>
       {/* <Counter /> */}
       {/* <CartItems products={products} /> */}
-      <ImageGallery imageItems={imageItems} />
+      {/* <ImageGallery imageItems={imageItems} /> */}
+      <TodoList />
     </>
   );
 }
