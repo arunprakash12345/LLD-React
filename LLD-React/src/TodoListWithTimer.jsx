@@ -1,18 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./CSS/todoList.css";
 const TodoListWithTimer = () => {
   const [tasks, setTasks] = useState([]);
   const taskInputRef = useRef(null);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTasks((prev) =>
-        prev.map((task) =>
-          task.isRunning ? { ...task, elapsed: task.elapsed + 1 } : task
-        )
-      );
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
   function handleAddTask() {
     if (taskInputRef.current.value.trim() === "") return;
     setTasks([
@@ -20,7 +10,7 @@ const TodoListWithTimer = () => {
       {
         text: taskInputRef.current.value,
         completed: false,
-        elapsed: 0,
+        elapsedTime: 0,
         isRunning: false,
       },
     ]);
@@ -35,35 +25,59 @@ const TodoListWithTimer = () => {
     updatedTasks[index].completed = !updatedTasks[index].completed;
     setTasks(updatedTasks);
   }
-
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTasks((prev) => {
+        return prev.map((task) => {
+          return task.isRunning
+            ? { ...task, elapsedTime: task.elapsedTime + 1 }
+            : task;
+        });
+      });
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
   function handleStartTimer(index) {
     setTasks((prev) =>
       prev.map((task, i) => (i === index ? { ...task, isRunning: true } : task))
     );
   }
-
-  function formatTime(seconds) {
-    const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return String(mins).padStart(2, "0") + ":" + String(secs).padStart(2, "0");
-  }
-
   function handleResetTimer(index) {
-    setTasks((prev) =>
-      prev.map((task, i) =>
-        i === index ? { ...task, elapsed: 0, isRunning: false } : task
-      )
-    );
-  }
-  function handlePauseTimer(index) {
-    setTasks((prev) => {
-      return prev.map((task, i) => {
+    setTasks((prevTasks) => {
+      return prevTasks.map((task, i) => {
         if (i === index) {
-          return { ...task, isRunning: false };
+          return {
+            ...task,
+            isRunning: false,
+            elapsedTime: 0,
+          };
         }
+        return task;
       });
     });
   }
+  function formatTime(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins.toString().padStart(2, "0")}:${secs
+      .toString()
+      .padStart(2, "0")}`;
+  }
+  function handlePauseTimer(index) {
+    setTasks((prev) => {
+      prev.map((task, i) => {
+        i === index
+          ? {
+              ...tasks,
+              isRunning: false,
+            }
+          : {
+              task,
+            };
+      });
+    });
+  }
+
   return (
     <>
       <h1>Todo List App</h1>
@@ -83,39 +97,42 @@ const TodoListWithTimer = () => {
               >
                 {task.text}
               </span>
-              {"    "}
-              <span className="timer">{formatTime(task.elapsed)}</span>
-              {!task.isRunning ? (
-                <button
-                  className="start"
-                  onClick={() => handleStartTimer(index)}
-                >
-                  {" "}
-                  Start
-                </button>
-              ) : (
-                <button
-                  className="pause"
-                  onClick={() => handlePauseTimer(index)}
-                >
-                  {" "}
-                  Pause
-                </button>
-              )}
+              {"   "}
+              <span>{formatTime(task.elapsedTime)}</span>
+              <div>
+                {task.isRunning ? (
+                  <button
+                    className="pause"
+                    onClick={() => handlePauseTimer(index)}
+                  >
+                    {" "}
+                    Pause
+                  </button>
+                ) : (
+                  <button
+                    className="start"
+                    onClick={() => handleStartTimer(index)}
+                  >
+                    {" "}
+                    Start
+                  </button>
+                )}
 
-              {"    "}
-              <button className="reset" onClick={() => handleResetTimer(index)}>
-                {" "}
-                Reset
-              </button>
-              {"    "}
-              <button
-                className="delete"
-                onClick={() => handleDeleteTask(index)}
-              >
-                {" "}
-                Delete
-              </button>
+                <button
+                  className="reset"
+                  onClick={() => handleResetTimer(index)}
+                >
+                  {" "}
+                  Reset
+                </button>
+                <button
+                  className="delete"
+                  onClick={() => handleDeleteTask(index)}
+                >
+                  {" "}
+                  Delete
+                </button>
+              </div>
             </li>
           ))}
         </ul>
