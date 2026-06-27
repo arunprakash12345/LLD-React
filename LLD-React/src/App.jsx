@@ -3,6 +3,7 @@ import "./App.css";
 // import CartItems from "./CartItems";
 // import ImageGallery from "./ImageGallery";
 import TodoList from "./TodoList";
+import TodoListWithTimer from "./TodoListWithTimer";
 
 function App() {
   const products = [
@@ -39,7 +40,8 @@ function App() {
       {/* <Counter /> */}
       {/* <CartItems products={products} /> */}
       {/* <ImageGallery imageItems={imageItems} /> */}
-      <TodoList />
+      {/* <TodoList /> */}
+      <TodoListWithTimer />
     </>
   );
 }

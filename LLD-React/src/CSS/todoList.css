@@ -82,11 +82,22 @@ li input[type="checkbox"] {
 }
 
 li button {
-  background: #e53935;
   padding: 8px 14px;
 }
+.delete {
+  background: #e53935;
+}
+.start {
+  background: #4caf50;
+}
+.reset {
+  background: #2196f3;
+}
+.reset:hover {
+  background: #1976d2;
+}
 
-li button:hover {
+.delete:hover {
   background: #c62828;
 }
 
@@ -99,4 +110,10 @@ body > #root {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.pause {
+  background: #ff9800;
+}
+.pause:hover {
+  background: #f57c00;
 }
