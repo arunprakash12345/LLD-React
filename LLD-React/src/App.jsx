@@ -1,4 +1,5 @@
 import "./App.css";
+import MultiSelectDropdown from "./MultiSelectDropdown";
 // import Counter from "./Counter";
 // import CartItems from "./CartItems";
 // import ImageGallery from "./ImageGallery";
@@ -41,7 +42,8 @@ function App() {
       {/* <CartItems products={products} /> */}
       {/* <ImageGallery imageItems={imageItems} /> */}
       {/* <TodoList /> */}
-      <TodoListWithTimer />
+      {/* <TodoListWithTimer /> */}
+      <MultiSelectDropdown />
     </>
   );
 }
