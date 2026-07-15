@@ -45,7 +45,6 @@ const MultiSelectDropdown = () => {
   function clearAll() {
     setSelectedCars([]);
   }
-
   return (
     <div className="container" ref={dropdownRef}>
       <h2>Multi Select Dropdown</h2>
