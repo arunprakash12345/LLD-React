@@ -1,6 +1,7 @@
 // import "./App.css";
 import MultiSelectDropdown from "./MultiSelectDropdown";
 import PasswordGenerator from "./PasswordGenerator";
+import GridLights from "./GridLight";
 // import Counter from "./Counter";
 // import CartItems from "./CartItems";
 // import ImageGallery from "./ImageGallery";
@@ -45,7 +46,8 @@ function App() {
       {/* <TodoList /> */}
       {/* <TodoListWithTimer /> */}
       {/* <MultiSelectDropdown /> */}
-      <PasswordGenerator />
+      {/* <PasswordGenerator /> */}
+      <GridLights />
     </>
   );
 }

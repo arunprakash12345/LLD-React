@@ -1,0 +1,12 @@
+.td {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: green;
+  color: white;
+}
