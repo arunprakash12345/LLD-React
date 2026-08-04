@@ -131,3 +131,5 @@ React is NOT about making websites faster.
 React is about making complex UIs easier to build, maintain, and reason about.
 
 Performance is a consequence—not the primary goal.
+
+
