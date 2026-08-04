@@ -11,8 +11,6 @@ const GridLights = () => {
     const col = (cellNumber - 1) % GRID_SIZE;
 
     const cellsToToggle = [cellNumber];
-
-    // Left
     if (col > 0) cellsToToggle.push(cellNumber - 1);
 
     // Right
