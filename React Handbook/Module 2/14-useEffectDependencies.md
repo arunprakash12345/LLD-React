@@ -105,3 +105,112 @@ The dependency array controls when a `useEffect` executes. React compares the cu
 - Empty array (`[]`) → Runs once after the initial render.
 - Specific dependencies (`[count]`) → Runs when those values change.
 - React compares dependencies between renders to decide whether to execute the effect.
+
+
+# Infinite Loops in useEffect
+
+## What is an Infinite Loop?
+
+An infinite loop occurs when a `useEffect` repeatedly updates state, causing continuous re-renders and repeated execution of the same effect.
+
+---
+
+## Example
+
+```jsx
+useEffect(() => {
+    setCount(count + 1);
+});
+```
+
+Flow:
+
+Render
+
+↓
+
+Effect
+
+↓
+
+State Update
+
+↓
+
+Render
+
+↓
+
+Effect
+
+↓
+
+...
+
+Infinite Loop
+
+---
+
+## Common Causes
+
+### 1. Missing Dependency Array
+
+```jsx
+useEffect(() => {
+    setCount(count + 1);
+});
+```
+
+Runs after every render.
+
+---
+
+### 2. Updating a Dependency
+
+```jsx
+useEffect(() => {
+    setCount(count + 1);
+}, [count]);
+```
+
+Changing `count` causes the effect to run again.
+
+---
+
+## Safe Example
+
+```jsx
+useEffect(() => {
+    fetch("/users")
+        .then(res => res.json())
+        .then(data => setUsers(data));
+}, []);
+```
+
+The effect runs once, updates state once, and does not run again.
+
+---
+
+## Mental Model
+
+Ask:
+
+1. Does the effect update state?
+2. Will that state update cause the same effect to run again?
+
+If both answers are **yes**, an infinite loop is likely.
+
+---
+
+## Interview Answer
+
+An infinite loop happens when a `useEffect` updates state, and that state change causes the same effect to execute repeatedly. The solution is to use the correct dependency array and avoid creating circular update cycles.
+
+---
+
+## Key Takeaways
+
+- Effects can update state.
+- State updates trigger re-renders.
+- Incorrect dependencies can cause infinite loops.
+- Always think about whether an effect depends on the state it updates.
