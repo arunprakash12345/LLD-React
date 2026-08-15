@@ -1,0 +1,40 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent-container {
+    height: 500px;
+    width: 400px;
+    background-color: #D6E4E5;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.output {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.input-fields {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+    align-items: center;
+}
+
+.button {
+    padding: 1rem;
+    background-color: #497174;
+}
+
+.button:hover {
+    background-color: #EB6340;
+}

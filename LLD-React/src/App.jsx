@@ -7,6 +7,7 @@ import GridLights from "./GridLight";
 // import ImageGallery from "./ImageGallery";
 import TodoList from "./TodoList";
 import TodoListWithTimer from "./TodoListWithTimer";
+import Calculator from "./Calculator";
 
 function App() {
   const products = [
@@ -47,7 +48,8 @@ function App() {
       {/* <TodoListWithTimer /> */}
       {/* <MultiSelectDropdown /> */}
       {/* <PasswordGenerator /> */}
-      <GridLights />
+      {/* <GridLights /> */}
+      <Calculator />
     </>
   );
 }
