@@ -1,0 +1,41 @@
+.traffic-light-container {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 500px;
+    justify-content: space-around;
+    padding: 15px;
+    margin-top: 3rem;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.red,
+.green,
+.yellow {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    background-color: #808080;
+}
+
+
+
+.red.active {
+    background-color: red;
+    opacity: 1;
+    box-shadow: 0 0 20px red;
+}
+
+.yellow.active {
+    background-color: yellow;
+    opacity: 1;
+    box-shadow: 0 0 20px yellow;
+}
+
+.green.active {
+    background-color: green;
+    opacity: 1;
+    box-shadow: 0 0 20px green;
+}

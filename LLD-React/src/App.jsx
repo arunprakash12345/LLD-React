@@ -8,6 +8,7 @@ import GridLights from "./GridLight";
 import TodoList from "./TodoList";
 import TodoListWithTimer from "./TodoListWithTimer";
 import Calculator from "./Calculator";
+import TraffiLights from "./TrafficLights";
 
 function App() {
   const products = [
@@ -49,7 +50,8 @@ function App() {
       {/* <MultiSelectDropdown /> */}
       {/* <PasswordGenerator /> */}
       {/* <GridLights /> */}
-      <Calculator />
+      {/* <Calculator /> */}
+      <TraffiLights />
     </>
   );
 }
