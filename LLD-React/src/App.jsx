@@ -11,7 +11,7 @@ import Calculator from "./Calculator";
 import TraffiLights from "./TrafficLights";
 import NotificationUI from './NotificationUI'
 import Notification from "./Components/Notification";
-
+import ModalUI from './ModalUI'
 function App() {
   const products = [
     { id: 1, name: "Product 1", price: 10 },
@@ -54,8 +54,8 @@ function App() {
       {/* <GridLights /> */}
       {/* <Calculator /> */}
       {/* <TraffiLights /> */}
-      <NotificationUI />
-      {/* <Notification type="success" message="hey there!" position="top-right" /> */}
+      {/* <NotificationUI /> */}
+      <ModalUI />
     </>
   );
 }
