@@ -9,6 +9,8 @@ import TodoList from "./TodoList";
 import TodoListWithTimer from "./TodoListWithTimer";
 import Calculator from "./Calculator";
 import TraffiLights from "./TrafficLights";
+import NotificationUI from './NotificationUI'
+import Notification from "./Components/Notification";
 
 function App() {
   const products = [
@@ -51,7 +53,9 @@ function App() {
       {/* <PasswordGenerator /> */}
       {/* <GridLights /> */}
       {/* <Calculator /> */}
-      <TraffiLights />
+      {/* <TraffiLights /> */}
+      <NotificationUI />
+      {/* <Notification type="success" message="hey there!" position="top-right" /> */}
     </>
   );
 }

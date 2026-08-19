@@ -1,0 +1,100 @@
+/* Container for the controls form panel */
+.container {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 20px;
+}
+
+/* Notification Card Base Styling */
+.notification-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    width: 360px;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    position: fixed; /* Position relative to the viewport */
+    border: 1px solid transparent;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    font-family: system-ui, -apple-system, sans-serif;
+    gap: 12px;
+}
+
+/* Light Theme Color Variants */
+.success {
+    background-color: #dcfce7;
+    border-color: #bbf7d0;
+    color: #15803d;
+}
+
+.info {
+    background-color: #dbeafe;
+    border-color: #bfdbfe;
+    color: #1d4ed8;
+}
+
+.warn {
+    background-color: #fef3c7;
+    border-color: #fde68a;
+    color: #b45309;
+}
+
+.error {
+    background-color: #fee2e2;
+    border-color: #fecaca;
+    color: #dc2626;
+}
+
+/* Close button pointer cursor */
+.close {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Base Position coordinates on the overall viewport */
+.top-right {
+    top: 20px;
+    right: 20px;
+}
+
+.top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+.bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+/* Simple Stacking logic so multiple toasts do not overlap */
+/* Using 60px height offset per toast card (50px card height + 10px gap) */
+.top-right ~ .top-right { top: calc(20px + 60px); }
+.top-right ~ .top-right ~ .top-right { top: calc(20px + 120px); }
+.top-right ~ .top-right ~ .top-right ~ .top-right { top: calc(20px + 180px); }
+.top-right ~ .top-right ~ .top-right ~ .top-right ~ .top-right { top: calc(20px + 240px); }
+
+.top-left ~ .top-left { top: calc(20px + 60px); }
+.top-left ~ .top-left ~ .top-left { top: calc(20px + 120px); }
+.top-left ~ .top-left ~ .top-left ~ .top-left { top: calc(20px + 180px); }
+.top-left ~ .top-left ~ .top-left ~ .top-left ~ .top-left { top: calc(20px + 240px); }
+
+.bottom-right ~ .bottom-right { bottom: calc(20px + 60px); }
+.bottom-right ~ .bottom-right ~ .bottom-right { bottom: calc(20px + 120px); }
+.bottom-right ~ .bottom-right ~ .bottom-right ~ .bottom-right { bottom: calc(20px + 180px); }
+.bottom-right ~ .bottom-right ~ .bottom-right ~ .bottom-right ~ .bottom-right { bottom: calc(20px + 240px); }
+
+.bottom-left ~ .bottom-left { bottom: calc(20px + 60px); }
+.bottom-left ~ .bottom-left ~ .bottom-left { bottom: calc(20px + 120px); }
+.bottom-left ~ .bottom-left ~ .bottom-left ~ .bottom-left { bottom: calc(20px + 180px); }
+.bottom-left ~ .bottom-left ~ .bottom-left ~ .bottom-left ~ .bottom-left { bottom: calc(20px + 240px); }
