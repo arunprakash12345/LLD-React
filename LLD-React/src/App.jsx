@@ -1,7 +1,7 @@
 // import "./App.css";
 import MultiSelectDropdown from "./MultiSelectDropdown";
 import PasswordGenerator from "./PasswordGenerator";
-import GridLights from "./GridLight";
+import GridLight from "./GridLight";
 // import Counter from "./Counter";
 // import CartItems from "./CartItems";
 // import ImageGallery from "./ImageGallery";
@@ -13,6 +13,7 @@ import NotificationUI from './NotificationUI'
 import Notification from "./Components/Notification";
 import ModalUI from './ModalUI'
 import PasswordStrength from './PasswordStrength'
+import GridLights from './GridLights'
 function App() {
   const products = [
     { id: 1, name: "Product 1", price: 10 },
@@ -57,7 +58,8 @@ function App() {
       {/* <TraffiLights /> */}
       {/* <NotificationUI /> */}
       {/* <ModalUI /> */}
-      <PasswordStrength />
+      {/* <PasswordStrength /> */}
+      <GridLights />
     </>
   );
 }

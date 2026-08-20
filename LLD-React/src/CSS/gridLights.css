@@ -1,0 +1,22 @@
+.grid {
+    margin-top: 10px;
+}
+
+.table-data {
+    height: 10rem;
+    width: 10rem;
+    background-color: rgb(192, 192, 192);
+    color: rgb(0, 53, 99);
+    border: 1px solid #222;
+}
+
+input {
+    padding: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+    color: #222;
+}
+
+.selected {
+    background-color: green;
+}
