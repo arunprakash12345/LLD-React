@@ -4,8 +4,6 @@ import Modal from './Components/Modal'
 import './CSS/modal.css'
 
 const ModalUI = () => {
-
-
     const [inputValue, setInputValue] = useState({
         outside: true,
         escape: true,
@@ -27,18 +25,15 @@ const ModalUI = () => {
 
     useEffect(() => {
         if (!inputValue.escape) return;
-        function handleEscape() {
-            closeModal();
+        function handleEscape(e) {
+            if (e.key === "Escape")
+                closeModal();
         }
         window.addEventListener("keydown", handleEscape);
         return () => {
             window.removeEventListener("keydown", handleEscape);
         }
     }, [inputValue.escape, isOpen, closeModal]);
-
-    function handleModal() {
-        openModal();
-    }
     return (
         <>
             <div>
@@ -58,7 +53,7 @@ const ModalUI = () => {
                     <span>Show backdrop</span>
                     <input type="checkbox" value="backdrop" checked={inputValue.backdrop} onChange={handleChange} />
                 </div>
-                <button className="input-box" onClick={handleModal}>Show modal</button>
+                <button className="input-box" onClick={openModal}>Show modal</button>
 
             </div>
             {isOpen && (

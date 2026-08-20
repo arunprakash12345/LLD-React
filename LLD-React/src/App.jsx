@@ -12,6 +12,7 @@ import TraffiLights from "./TrafficLights";
 import NotificationUI from './NotificationUI'
 import Notification from "./Components/Notification";
 import ModalUI from './ModalUI'
+import PasswordStrength from './PasswordStrength'
 function App() {
   const products = [
     { id: 1, name: "Product 1", price: 10 },
@@ -55,7 +56,8 @@ function App() {
       {/* <Calculator /> */}
       {/* <TraffiLights /> */}
       {/* <NotificationUI /> */}
-      <ModalUI />
+      {/* <ModalUI /> */}
+      <PasswordStrength />
     </>
   );
 }
