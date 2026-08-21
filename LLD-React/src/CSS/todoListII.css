@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.todo-List {
+    margin-top: 5rem;
+    width: 60%;
+}
+
+.task-input {
+    padding: .75rem;
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.cancel {
+    background-color: red;
+}
+
+.cancel:hover {
+    background-color: darkred;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #c7c7c7;
+    padding: .5rem;
+    border-radius: 5px;
+    margin-top: .5rem;
+    align-content: center;
+}
+
+.delete,
+.edit,
+p {
+    margin-top: 0;
+}

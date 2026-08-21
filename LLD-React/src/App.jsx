@@ -15,6 +15,9 @@ import ModalUI from './ModalUI'
 import PasswordStrength from './PasswordStrength'
 import GridLights from './GridLights'
 import ColumnTable from './ColumnTable'
+import TodoListII from './TodoListII'
+
+
 function App() {
   const products = [
     { id: 1, name: "Product 1", price: 10 },
@@ -61,7 +64,8 @@ function App() {
       {/* <ModalUI /> */}
       {/* <PasswordStrength /> */}
       {/* <GridLights /> */}
-      <ColumnTable />
+      {/* <ColumnTable /> */}
+      <TodoListII />
     </>
   );
 }
