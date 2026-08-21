@@ -14,6 +14,7 @@ import Notification from "./Components/Notification";
 import ModalUI from './ModalUI'
 import PasswordStrength from './PasswordStrength'
 import GridLights from './GridLights'
+import ColumnTable from './ColumnTable'
 function App() {
   const products = [
     { id: 1, name: "Product 1", price: 10 },
@@ -59,7 +60,8 @@ function App() {
       {/* <NotificationUI /> */}
       {/* <ModalUI /> */}
       {/* <PasswordStrength /> */}
-      <GridLights />
+      {/* <GridLights /> */}
+      <ColumnTable />
     </>
   );
 }

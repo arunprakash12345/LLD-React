@@ -32,23 +32,18 @@ const GridLights = () => {
 
     function handleLights(e) {
         const key = e.target.dataset.key;
-
         if (lightArray.includes(key)) return;
         const updatedLights = [...lightArray, key];
         setLightArray(updatedLights);
         if (updatedLights.length === colSize * colSize) {
             console.log("Completed!");
-            for (let i = 0; i < updatedLights.length; i++) {
+            for (let i = 1; i <= updatedLights.length; i++) {
                 setTimeout(() => {
                     setLightArray((prev) => prev.slice(0, -1));
-                }, (i + 1) * 1000);
+                }, (i) * 1000);
             }
         }
     }
-
-    useEffect(() => {
-        console.log(lightArray);
-    }, [lightArray]);
 
     return (
         <div>

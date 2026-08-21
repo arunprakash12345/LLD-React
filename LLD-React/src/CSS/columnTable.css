@@ -1,0 +1,27 @@
+.table-data1 {
+    padding: 1rem !important;
+    border: 1px solid #c31c1c;
+}
+
+.table {
+    padding: 2rem;
+}
+
+.input-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 0;
+}
+
+.control input {
+    width: 300px;
+}
