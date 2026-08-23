@@ -16,7 +16,7 @@ import PasswordStrength from './PasswordStrength'
 import GridLights from './GridLights'
 import ColumnTable from './ColumnTable'
 import TodoListII from './TodoListII'
-
+import StopWatch from './StopWatch'
 
 function App() {
   const products = [
@@ -65,7 +65,9 @@ function App() {
       {/* <PasswordStrength /> */}
       {/* <GridLights /> */}
       {/* <ColumnTable /> */}
-      <TodoListII />
+      {/* <TodoListII />
+       */}
+      <StopWatch />
     </>
   );
 }
