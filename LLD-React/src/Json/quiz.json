@@ -1,0 +1,104 @@
+{
+    "questions": [
+        {
+            "question": "What is the purpose of state in React?",
+            "answers": [
+                "To store information that may change over time",
+                "To declare static values for components",
+                "To define global variables",
+                "None of the above"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "question": "Which React Hook is used to perform side effects in functional components?",
+            "answers": [
+                "useState",
+                "useEffect",
+                "useContext",
+                "useReducer"
+            ],
+            "correctAnswer": 4
+        },
+        {
+            "question": "In React, what is the role of 'keys' in lists?",
+            "answers": [
+                "To uniquely identify elements and help React identify which items have changed, are added, or are removed",
+                "To apply CSS styles to specific list items",
+                "To bind click handlers to the list items",
+                "To encrypt the list data for security"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "question": "What is the correct way to pass data from a parent component to a child component?",
+            "answers": [
+                "Using state",
+                "Using props",
+                "Using context",
+                "Using local storage"
+            ],
+            "correctAnswer": 4
+        },
+        {
+            "question": "Which hook should be used to reference a DOM element directly in React?",
+            "answers": [
+                "useRef",
+                "useMemo",
+                "useDOM",
+                "useState"
+            ],
+            "correctAnswer": 0
+        },
+        {
+            "question": "What does JSX stand for?",
+            "answers": [
+                "JavaScript XML",
+                "JavaScript Extension",
+                "Java Syntax Extension",
+                "JavaScript Syntax eXtreme"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "question": "How do you prevent a component from re-rendering when props or state haven't changed?",
+            "answers": [
+                "By wrapping the component in React.memo()",
+                "By using the useEffect hook",
+                "By setting state to null",
+                "By calling forceUpdate()"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "question": "What is the virtual DOM in React?",
+            "answers": [
+                "A direct copy of the browser's DOM",
+                "A lightweight representation of the real DOM in memory",
+                "A database used to store state",
+                "A browser extension for debugging"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "question": "What is the purpose of the useMemo Hook?",
+            "answers": [
+                "To memoize state values across page reloads",
+                "To memoize the result of an expensive computation",
+                "To reference a DOM node",
+                "To register event listeners"
+            ],
+            "correctAnswer": 2
+        },
+        {
+            "question": "Which method in a React class component is called immediately after a component is mounted?",
+            "answers": [
+                "componentWillMount",
+                "componentDidMount",
+                "componentDidUpdate",
+                "render"
+            ],
+            "correctAnswer": 3
+        }
+    ]
+}

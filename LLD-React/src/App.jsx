@@ -17,6 +17,7 @@ import GridLights from './GridLights'
 import ColumnTable from './ColumnTable'
 import TodoListII from './TodoListII'
 import StopWatch from './StopWatch'
+import QuizApp from './QuizApp'
 
 function App() {
   const products = [
@@ -67,7 +68,8 @@ function App() {
       {/* <ColumnTable /> */}
       {/* <TodoListII />
        */}
-      <StopWatch />
+      {/* <StopWatch /> */}
+      <QuizApp />
     </>
   );
 }
