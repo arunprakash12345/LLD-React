@@ -18,6 +18,7 @@ import ColumnTable from './ColumnTable'
 import TodoListII from './TodoListII'
 import StopWatch from './StopWatch'
 import QuizApp from './QuizApp'
+import ChessBoard from './ChessBoard'
 
 function App() {
   const products = [
@@ -69,7 +70,8 @@ function App() {
       {/* <TodoListII />
        */}
       {/* <StopWatch /> */}
-      <QuizApp />
+      {/* <QuizApp /> */}
+      <ChessBoard />
     </>
   );
 }

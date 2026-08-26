@@ -1,0 +1,22 @@
+.cells {
+    padding: 3rem;
+    border: 1px solid #222;
+    cursor: pointer;
+}
+
+.black {
+    background-color: #222;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0;
+}
+
+.highlight {
+    background-color: red;
+}
