@@ -19,6 +19,7 @@ import TodoListII from './TodoListII'
 import StopWatch from './StopWatch'
 import QuizApp from './QuizApp'
 import ChessBoard from './ChessBoard'
+import TransferList from './TransferList'
 
 function App() {
   const products = [
@@ -71,7 +72,8 @@ function App() {
        */}
       {/* <StopWatch /> */}
       {/* <QuizApp /> */}
-      <ChessBoard />
+      {/* <ChessBoard /> */}
+      <TransferList />
     </>
   );
 }
