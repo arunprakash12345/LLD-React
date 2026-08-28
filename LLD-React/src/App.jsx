@@ -20,6 +20,7 @@ import StopWatch from './StopWatch'
 import QuizApp from './QuizApp'
 import ChessBoard from './ChessBoard'
 import TransferList from './TransferList'
+import InfiniteScroll from './InfiniteScroll'
 
 function App() {
   const products = [
@@ -73,7 +74,8 @@ function App() {
       {/* <StopWatch /> */}
       {/* <QuizApp /> */}
       {/* <ChessBoard /> */}
-      <TransferList />
+      {/* <TransferList /> */}
+      <InfiniteScroll />
     </>
   );
 }

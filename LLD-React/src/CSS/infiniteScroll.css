@@ -1,0 +1,13 @@
+.list-item {
+    padding: 1rem;
+    border: 1px solid #d5d5d5;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 1rem;
+    background-color: #fafafc;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 3rem;
+}
