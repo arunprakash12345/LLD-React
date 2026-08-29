@@ -22,6 +22,7 @@ import ChessBoard from './ChessBoard'
 import TransferList from './TransferList'
 import InfiniteScroll from './InfiniteScroll'
 import ChipsAdd from './ChipsAdd'
+import AdvancedCounter from './AdvancedCounter'
 
 function App() {
   const products = [
@@ -77,7 +78,8 @@ function App() {
       {/* <ChessBoard /> */}
       {/* <TransferList /> */}
       {/* <InfiniteScroll /> */}
-      <ChipsAdd />
+      {/* <ChipsAdd /> */}
+      <AdvancedCounter />
     </>
   );
 }
