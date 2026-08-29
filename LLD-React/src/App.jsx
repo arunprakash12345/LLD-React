@@ -21,6 +21,7 @@ import QuizApp from './QuizApp'
 import ChessBoard from './ChessBoard'
 import TransferList from './TransferList'
 import InfiniteScroll from './InfiniteScroll'
+import ChipsAdd from './ChipsAdd'
 
 function App() {
   const products = [
@@ -75,7 +76,8 @@ function App() {
       {/* <QuizApp /> */}
       {/* <ChessBoard /> */}
       {/* <TransferList /> */}
-      <InfiniteScroll />
+      {/* <InfiniteScroll /> */}
+      <ChipsAdd />
     </>
   );
 }
