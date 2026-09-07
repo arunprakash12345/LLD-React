@@ -23,6 +23,8 @@ import TransferList from './TransferList'
 import InfiniteScroll from './InfiniteScroll'
 import ChipsAdd from './ChipsAdd'
 import AdvancedCounter from './AdvancedCounter'
+// import NestedCheckBox from './NestedCheckBox'
+import Otp from './Otp.jsx'
 
 function App() {
   const products = [
@@ -79,7 +81,9 @@ function App() {
       {/* <TransferList /> */}
       {/* <InfiniteScroll /> */}
       {/* <ChipsAdd /> */}
-      <AdvancedCounter />
+      {/* <AdvancedCounter /> */}
+      {/* <NestedCheckBox /> */}
+      <Otp />
     </>
   );
 }
