@@ -1,0 +1,48 @@
+.strike {
+  text-decoration: line-through;
+}
+.text-input {
+  padding: 0.75rem;
+  width: 20rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.todo-container {
+  padding: 5rem;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+.add-button {
+  padding: 0.75rem;
+  margin-left: 5px;
+  border: none;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo-item {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 1rem;
+  background-color: #fff;
+  justify-content: space-between;
+  margin-top: 1rem;
+  align-items: center;
+}
+.delete-button {
+  padding: 0.5rem;
+  color: white;
+  background-color: darkred;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.checkbox {
+  border: 1px solid #d9d9d9;
+  padding: 0.25rem;
+}
